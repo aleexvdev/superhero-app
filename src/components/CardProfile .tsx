@@ -67,10 +67,12 @@ export const CardProfile = () => {
           <div className='flex flex-col items-start justify-start pt-2 px-3'>
             <div className='flex flex-row flex-wrap justify-center w-full items-center'>
               <span className={`text-white text-[13px] pr-2 tracking-wide`}>SuperHero data provided by</span>
-              <span className={`text-whit text-[13px] flex flex-row items-center hover:text-blue-500 cursor-pointer tracking-wide`}>
-                <IconLinkWeb fontSize={15} />
-                <span>OpenWeather</span>
-              </span>
+              <a href="https://superheroapi.com/" target="_blank" rel="noopener noreferrer">
+                <span className={`text-whit text-[13px] flex flex-row items-center hover:text-blue-500 cursor-pointer tracking-wide`}>
+                  <IconLinkWeb fontSize={15} />
+                  <span>SuperHeroAPI</span>
+                </span>
+              </a>
             </div>
           </div>
         </div>
