@@ -49,7 +49,7 @@ export const NavBar = () => {
             <div className={`flex items-center justify-center border-2 rounded-full p-3 hover:border-red-500 ${activePage === '/info' ? 'border-red-500' : 'border-white'}`}>
               <div className='flex items-start justify-start w-full'>
                 <div>
-                  <img src={'/public/batman.png'} alt={''} className="w-[35px] h-full" title={''} />
+                  <img src={'/batman.png'} alt={''} className="w-[35px] h-full" title={''} />
                 </div>
               </div>
             </div>

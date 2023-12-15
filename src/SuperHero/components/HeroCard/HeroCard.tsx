@@ -21,19 +21,19 @@ export const HeroCard = ({ props }: PropsHeroCard) => {
           <div className="flex items-center justify-center px-2 h-22 pb-2">
             <div className="flex items-center justify-center gap-2">
               <div className="border-2 border-none rounded-full p-2 flex flex-col items-center justify-center">
-                <img src={'/public/combat.png'} alt={powerstats.combat} className="w-[35px] h-full" title={powerstats.combat} />
+                <img src={'/combat.png'} alt={powerstats.combat} className="w-[35px] h-full" title={powerstats.combat} />
                 <span>{powerstats.combat}</span>
               </div>
               <div className="border-2 border-none rounded-full p-2 flex flex-col items-center justify-center">
-                <img src={'/public/power.png'} alt={powerstats.combat} className="w-[35px] h-full" title={powerstats.combat} />
+                <img src={'/power.png'} alt={powerstats.combat} className="w-[35px] h-full" title={powerstats.combat} />
                 <span className="">{powerstats.power}</span>
               </div>
               <div className="border-2 border-none rounded-full p-2 flex flex-col items-center justify-center">
-                <img src={'/public/strength.png'} alt={powerstats.combat} className="w-[35px] h-full" title={powerstats.combat} />
+                <img src={'/strength.png'} alt={powerstats.combat} className="w-[35px] h-full" title={powerstats.combat} />
                 <span>{powerstats.strength}</span>
               </div>
               <div className="border-2 border-none rounded-full p-2 flex flex-col items-center justify-center">
-                <img src={'/public/speed.png'} alt={powerstats.combat} className="w-[35px] h-full" title={powerstats.combat} />
+                <img src={'/speed.png'} alt={powerstats.combat} className="w-[35px] h-full" title={powerstats.combat} />
                 <span>{powerstats.speed}</span>
               </div>
             </div>
