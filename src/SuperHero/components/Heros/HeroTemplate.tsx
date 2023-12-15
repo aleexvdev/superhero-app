@@ -1,9 +1,9 @@
 import { useParams } from 'react-router'
-import { HeroCard } from './HeroCard/HeroCard'
-import { HeroDetails } from './HeroDetails/HeroDetails'
+import { HeroCard } from '../HeroCard/HeroCard'
+import { HeroDetails } from '../HeroDetails/HeroDetails'
 import { useEffect, useState } from 'react';
-import { getHeroData } from '../../api/apihero';
-import { TypeHeroApp } from '../../types/TypeHero';
+import { getHeroData } from '../../../api/apihero';
+import { TypeHeroApp } from '../../../types/TypeHero';
 
 export const HeroTemplate = () => {
   const { id } = useParams<{ id: string | undefined }>();

@@ -1,5 +1,5 @@
-import { HeroHeader } from '../components/HeroHeader'
-import { HeroTemplate } from '../components/HeroTemplate'
+import { HeroHeader } from '../components/Heros/HeroHeader'
+import { HeroTemplate } from '../components/Heros/HeroTemplate'
 
 export const PageHero = () => {
   return (

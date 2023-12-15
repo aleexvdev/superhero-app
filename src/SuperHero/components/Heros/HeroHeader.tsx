@@ -1,9 +1,9 @@
-import { HeroSearch } from './HeroSearch'
-import { TitleApp } from '../../ui/components/TitleApp'
+import { HeroSearch } from '../HeroSearch'
+import { TitleApp } from '../../../ui/components/TitleApp'
 import { useEffect, useState } from 'react'
-import { TypeHeroApp } from '../../types/TypeHero';
-import { getSearchHeroData } from '../../api/apihero';
-import { HeroResult } from './HeroResult';
+import { TypeHeroApp } from '../../../types/TypeHero';
+import { getSearchHeroData } from '../../../api/apihero';
+import { HeroResult } from '../HeroResult';
 
 export const HeroHeader = () => {
 
