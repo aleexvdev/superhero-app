@@ -1,7 +1,9 @@
-import React from 'react'
+import { CardProfile } from "../../components/CardProfile "
 
 export const PageInfo = () => {
   return (
-    <div>PageInfo</div>
+    <div>
+      <CardProfile />
+    </div>
   )
 }

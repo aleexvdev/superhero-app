@@ -39,3 +39,59 @@ export type TypeHeroApp = {
     url: string;
   };
 };
+
+export type TypePowerStats = {
+  intelligence: string;
+  strength: string;
+  speed: string;
+  durability: string;
+  power: string;
+  combat: string;
+}
+
+export type TypeFetchAppResponse = {
+  message: string;
+  data: TypeHeroApp | null;
+  status: number;
+}
+
+export type TypeSocialNetworks = {
+  id: number;
+  social_network: string;
+  url: string;
+  icon: string;
+}
+
+export type TypeBiography = {
+  "full-name": string;
+  "alter-egos": string;
+  aliases: string[];
+  "place-of-birth": string;
+  "first-appearance": string;
+  publisher: string;
+  alignment: string;
+  [key: string]: string|string[];
+}
+
+export type TypeAppearance = {
+  gender: string;
+  race: string;
+  height: string[];
+  weight: string[];
+  "eye-color": string;
+  "hair-color": string;
+  [key: string]: string|string[];
+}
+
+export type TypeWork = {
+  occupation: string;
+  base: string;
+  [key: string]: string;
+}
+
+export type TypeConnections = {
+  "group-affiliation": string;
+  relatives: string;
+  [key: string]: string;
+}
+

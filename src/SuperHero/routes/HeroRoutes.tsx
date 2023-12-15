@@ -11,7 +11,7 @@ export const HeroRoutes = () => {
         <Route path="/heroes" element={<PageHero />} />
         <Route path="/favorites" element={<PageFavorite />} />
         <Route path="/info" element={<PageInfo />} />
-        {/* <Route path="/favorites/:id" element={<PageHero />} /> */}
+        <Route path="/heroes/:id" element={<PageHero />} />
       </Routes>
     </div>
   )
