@@ -35,7 +35,7 @@ export const HeroDetails = ({ props }: PropsHeroDetails) => {
   } 
 
   return (
-    <div className="mx-auto p-4 w-full">
+    <div className="mx-auto px-4 w-full">
       <div className="flex mb-4 items-center justify-between gap-10">
         {tabs.map((tab) => (
           <motion.button
@@ -52,7 +52,7 @@ export const HeroDetails = ({ props }: PropsHeroDetails) => {
           </motion.button>
         ))}
       </div>
-      <div className="border p-4">
+      <div>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
           {renderTabContent(selectedTab)}
         </motion.div>

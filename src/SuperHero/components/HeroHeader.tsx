@@ -28,8 +28,6 @@ export const HeroHeader = () => {
   const onChangeInput = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearch(event.target.value);
   }
-
-  console.log(searchResults);
   return (
     <div className='flex items-center justify-between h-20'>
       <TitleApp title1={'Super'} title2={'Hero'} />

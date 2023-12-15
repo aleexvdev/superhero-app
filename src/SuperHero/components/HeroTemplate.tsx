@@ -31,12 +31,12 @@ export const HeroTemplate = () => {
   }
 
   return (
-    <section className="min-h-full w-full mt-8">
+    <section className="min-h-full w-full mt-12">
       <div className='flex items-start justify-start h-full gap-10'>
         <div className='w-[21%]'>
           <HeroCard props={hero} />
         </div>
-        <div className='w-[79%] bg-black'>
+        <div className='w-[79%]'>
           <HeroDetails props={hero} />
         </div>
       </div>

@@ -25,21 +25,6 @@ export const getHeroData = async (id: string): Promise<TypeFetchAppResponse> => 
 
 export const getSearchHeroData = async (search: string): Promise<TypeFetchAppSearchResponse> => {
   const url = `${BASE_URL}/1024982038525332/search/${search}`;
-  /* try {
-    const response: AxiosResponse<TypeHeroApp[]> = await axios.get(url);
-    return {
-      data: response.data,
-      message: 'Data fetched successfully',
-      status: 200,
-    };
-  } catch (error) {
-    console.error(error);
-    return {
-      data: null,
-      message: 'Failed to fetch data',
-      status: 500,
-    };
-  } */
   try {
     const response: AxiosResponse<TypeFetchAppSearchResponse> = await axios.get(url);
     return response.data;

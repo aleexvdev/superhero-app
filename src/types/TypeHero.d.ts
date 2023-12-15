@@ -55,12 +55,6 @@ export type TypeFetchAppResponse = {
   status: number;
 }
 
-/* export type TypeFetchAppSearchResponse = {
-  message: string;
-  data: TypeHeroApp[] | null;
-  status: number;
-} */
-
 export type TypeFetchAppSearchResponse = {
   response: 'success' | 'error'; // El servidor devuelve 'success' o 'error'
   'results-for': string; // 'results-for' es una cadena según tu respuesta
