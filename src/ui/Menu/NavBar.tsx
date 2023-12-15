@@ -43,10 +43,10 @@ export const NavBar = () => {
         <div>
           <Link 
             to={'/info'}
-            className={`py-5 ${activePage === '/info' ? 'border-2 border-red-500' : 'border-2 border-white'}`}
+            className='py-5'
             onClick={() => setActivePage('/info')}
           >
-            <div className='flex items-center justify-center border-2 rounded-full p-3 hover:border-red-500 '>
+            <div className={`flex items-center justify-center border-2 rounded-full p-3 hover:border-red-500 ${activePage === '/info' ? 'border-red-500' : 'border-white'}`}>
               <div className='flex items-start justify-start w-full'>
                 <div>
                   <img src={'/public/batman.png'} alt={''} className="w-[35px] h-full" title={''} />

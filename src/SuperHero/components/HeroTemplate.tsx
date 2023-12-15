@@ -31,7 +31,7 @@ export const HeroTemplate = () => {
   }
 
   return (
-    <section className="min-h-full w-full mt-12">
+    <section className="min-h-full h-full w-full mt-12">
       <div className='flex items-start justify-start h-full gap-10'>
         <div className='w-[21%]'>
           <HeroCard props={hero} />

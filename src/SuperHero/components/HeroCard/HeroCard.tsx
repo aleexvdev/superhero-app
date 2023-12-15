@@ -13,7 +13,7 @@ export const HeroCard = ({ props }: PropsHeroCard) => {
       <div className="h-full flex flex-col items-start justify-start gap-10 bg-black rounded-xl">
         <div className="w-full h-full">
           <div className="flex items-center justify-center">
-            <img src={image.url} alt={name} className="w-[240px] h-full max-h-[280px] rounded-xl" />
+            <img src={image.url} alt={name} className="w-[240px] h-full max-h-[260px] rounded-xl" />
           </div>
           <div className="flex items-center justify-center h-14">
             <h1 className="text-2xl font-medium tracking-wide text-white">{name}</h1>

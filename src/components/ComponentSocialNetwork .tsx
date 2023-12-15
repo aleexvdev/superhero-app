@@ -16,7 +16,7 @@ export const ComponentSocialNetwork = ( {props}: TypePropsSocial ) => {
           src={`../../public/social_svg/${icon}.svg`} 
           alt={social_network} 
           title={social_network} 
-          className='inline-block w-10 h-10 md:w-8 md:h-8'
+          className='inline-block w-20 h-20'
         />
       </a>
     </div>
