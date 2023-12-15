@@ -1,4 +1,5 @@
 import { capitalizeFirstLetter } from "../../../functions/globals";
+import { IconXDiamondFill } from "../../../icons/IconXDiamondFill";
 import { TypeBiography } from "../../../types/TypeHero";
 
 type TypeBiographyProps = {
@@ -13,10 +14,10 @@ export const Biography = ( { props }: TypeBiographyProps ) => {
           Object.keys(props).map( (key, index) => (
             <div key={index} className='flex items-center justify-start py-2'>
               <div className='w-10'>
-                  {/* <IconXDiamondFill 
+                  <IconXDiamondFill 
                     fontSize={16}
                     className='text-yellow-600'
-                  /> */}
+                  />
                 </div>
               <div>
                 <p className='text-gray-400'>{capitalizeFirstLetter(key)}:<span className='ml-3 text-white'>{props[key]}</span></p>

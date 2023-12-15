@@ -1,4 +1,5 @@
 import { capitalizeFirstLetter } from "../../../functions/globals";
+import { IconConnections } from "../../../icons/IconConnections";
 import { TypeConnections } from "../../../types/TypeHero";
 
 type TypeConnectionsProps = {
@@ -13,18 +14,18 @@ export const Connections = ( { props }: TypeConnectionsProps ) => {
           Object.keys(props).map( (key, index) => (
             <div key={index} className='flex flex-col items-center justify-start py-2'>
               <div className='w-full flex items-center justify-start py-1'>
-                <div className='w-10'>
-                  {/* <IconConnections 
+                <div className='w-14'>
+                  <IconConnections 
                       fontSize={26}
                       className='text-yellow-600'
-                    /> */}
+                    />
                   </div>
                 <div>
                   <p className='text-gray-400'>{capitalizeFirstLetter(key).toUpperCase()}</p>
                 </div>
               </div>
               <div className='w-full flex items-center justify-start py-1'>
-                <div className='ml-10'>
+                <div className='ml-14'>
                   <p className='text-white'>{props[key]}</p>
                 </div>
               </div>

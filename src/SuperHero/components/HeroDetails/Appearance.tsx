@@ -1,4 +1,5 @@
 import { capitalizeFirstLetter } from "../../../functions/globals";
+import { IconStar } from "../../../icons/IconStar";
 import { TypeAppearance } from "../../../types/TypeHero";
 
 type TypeAppearanceProps = {
@@ -13,10 +14,10 @@ export const Appearance = ( { props }: TypeAppearanceProps ) => {
             <div className='flex items-center justify-between py-2'>
               <div key={index} className='flex items-center justify-start'>
                 <div className='w-10'>
-                  {/* <IconStar 
+                  <IconStar 
                     fontSize={20}
                     className='text-yellow-600'
-                  /> */}
+                  />
                 </div>
                 <div>
                   <p>{capitalizeFirstLetter(key)}</p>
