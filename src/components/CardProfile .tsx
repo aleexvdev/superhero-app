@@ -19,7 +19,7 @@ export const CardProfile = () => {
       initial="hidden"
       animate="visible"
       variants={containerVariants}
-      className='w-full md:w-[180px] md:h-[135px] h-[100px] rounded-lg bg-gradient-to-br from-green-200 via-green-400 to-teal-400 shadow-md shadow-black py-2 md:py-3 px-3 md:px-4 relative'
+      className='w-[60%] h-full rounded-lg bg-gradient-to-br from-green-200 via-green-400 to-teal-400 shadow-md shadow-black py-2 md:py-3 px-3 md:px-4 relative'
     >
       <div className='grid md:grid-cols-1 md:grid-rows-4 grid-cols-3 grid-rows-3 gap-0 w-full h-full'>
         <motion.h2 
