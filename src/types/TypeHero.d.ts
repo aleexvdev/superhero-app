@@ -55,6 +55,20 @@ export type TypeFetchAppResponse = {
   status: number;
 }
 
+/* export type TypeFetchAppSearchResponse = {
+  message: string;
+  data: TypeHeroApp[] | null;
+  status: number;
+} */
+
+export type TypeFetchAppSearchResponse = {
+  response: 'success' | 'error'; // El servidor devuelve 'success' o 'error'
+  'results-for': string; // 'results-for' es una cadena según tu respuesta
+  results: TypeHeroApp[]; // 'results' es un array de objetos TypeHeroApp según tu respuesta
+  message?: string; // Mensaje opcional, si el servidor proporciona un mensaje
+  status?: number; // Estado opcional, si el servidor proporciona un estado
+}
+
 export type TypeSocialNetworks = {
   id: number;
   social_network: string;

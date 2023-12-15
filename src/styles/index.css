@@ -46,46 +46,21 @@ body{
           justify-content: stretch;
 }
 
-/* .main-wrapper{
-  max-width: 1280px;
-  width: 100%;
-  margin: 0 auto;
+/* Estilo para el scroll personalizado */
+.scrollbar-custom::-webkit-scrollbar {
+  width: 6px; /* Ajusta el ancho del scroll según tus preferencias */
 }
-.app{
-  background-color: var(--dark-color);
-  margin: 2rem;
-  padding: 5rem;
-  border-radius: 6px;
-  color: #fff;
-  -webkit-box-shadow: 0px 5px 11px 0px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 5px 11px 0px rgba(0, 0, 0, 0.5);
+
+/* Estilo para el thumb (deslizador) del scroll */
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: rgb(249, 47, 47); /* Color del thumb */
+  border-radius: 16px; /* Radio del borde para hacerlo redondeado */
 }
-.app-header{
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+
+/* Estilo para el track del scroll (área detrás del thumb) */
+.scrollbar-custom::-webkit-scrollbar-track {
+  background-color: gray; /* Color del track del scroll */
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
 }
-.app-header-title span{
-  color: var(--red-color);
-}
-.app-header-search{
-  border: 2px solid var(--grey-color);
-  border-radius: 3rem;
-  padding: 1rem 2rem;
-  position: relative;
-}
-.app-header-search .form-control{
-  min-width: 420px;
-  color: #fff;
-}
-.app-header-search .search-btn{
-  color: var(--grey-color);
-  font-size: 2.3rem;
-  cursor: pointer;
-} */
+
