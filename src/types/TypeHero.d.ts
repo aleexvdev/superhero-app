@@ -103,3 +103,17 @@ export type TypeConnections = {
   [key: string]: string;
 }
 
+export type AddHeroAction =  {
+  type: 'ADD_HERO';
+  payload: TypeHeroApp;
+}
+
+export type SetHerosAction =  {
+  type: 'SET_HEROS';
+  payload: TypeHeroApp[];
+}
+
+export type DeleteHeroAction = {
+  type: 'DELETE_HERO';
+  payload: TypeHeroApp;
+}

@@ -18,7 +18,7 @@ export const NavBar = () => {
           <ul className="my-16 flex flex-col items-center justify-center gap-8">
             <Link 
               to={'/heroes'}
-              className={`py-5 ${activePage === '/heroes' ? 'text-red-700' : 'text-white'}`}
+              className={`py-5 ${activePage === '/heroes' || activePage === '/' ? 'text-red-700' : 'text-white'}`}
               onClick={() => setActivePage('/heroes')}
             >
               <div className='flex items-center justify-center gap-1 hover:text-red-500'>

@@ -1,19 +1,37 @@
-import { TypeHeroApp } from "../../../types/TypeHero";
+import React  from "react";
+import { AddHeroAction, DeleteHeroAction, SetHerosAction, TypeHeroApp } from "../../../types/TypeHero";
+import { IconHeart } from "../../../icons/IconHeart";
+
+type Action = AddHeroAction | SetHerosAction | DeleteHeroAction;
 
 type PropsHeroCard = {
   props: TypeHeroApp;
+  dispatch: React.Dispatch<Action>;
 }
 
-export const HeroCard = ({ props }: PropsHeroCard) => {
+export const HeroCard = ({ props, dispatch }: PropsHeroCard) => {
 
   const { id, name, powerstats, image } = props;
-  
+
+  const saveHero = () => {
+    dispatch({ 
+      type: 'ADD_HERO', 
+      payload: props 
+    });
+  }
+
   return (
     <div className="h-full" key={id}>
       <div className="h-full flex flex-col items-start justify-start gap-10 bg-black rounded-xl">
         <div className="w-full h-full">
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center relative">
             <img src={image.url} alt={name} className="w-[240px] h-full max-h-[250px] rounded-xl" />
+            <div className="absolute top-3 right-3 bg-red-600 hover:bg-white rounded-full w-16 h-16">
+              <IconHeart 
+                className="text-white hover:text-red-600 cursor-pointer w-full h-full"
+                onClick={saveHero}
+              />
+            </div>
           </div>
           <div className="flex items-center justify-center h-14">
             <h1 className="text-2xl font-medium tracking-wide text-white">{name}</h1>
