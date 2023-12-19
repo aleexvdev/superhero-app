@@ -80,7 +80,3 @@ export const CardProfile = () => {
     </div>
   )
 }
-
-/*
-https://superheroapi.com/api/
-*/

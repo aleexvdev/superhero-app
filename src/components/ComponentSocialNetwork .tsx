@@ -13,7 +13,7 @@ export const ComponentSocialNetwork = ( {props}: TypePropsSocial ) => {
     <div key={id} className='flex items-center justify-center'>
       <a href={url} target='_blank' rel='noreferrer'>
         <img 
-          src={`../../public/social_svg/${icon}.svg`} 
+          src={`/social_svg/${icon}.svg`} 
           alt={social_network} 
           title={social_network} 
           className='inline-block w-20 h-20'
