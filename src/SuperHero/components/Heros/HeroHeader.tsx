@@ -1,15 +1,16 @@
-import { HeroSearch } from '../HeroSearch'
 import { TitleApp } from '../../../ui/components/TitleApp'
 import { useEffect, useState } from 'react'
 import { TypeHeroApp } from '../../../types/TypeHero';
 import { getSearchHeroData } from '../../../api/apihero';
 import { HeroResult } from '../HeroResult';
+import { ComponentSearch } from '../../../components/ComponentSearch';
 
 export const HeroHeader = () => {
 
   const [search, setSearch] = useState<string>('');
   const [searchResults, setSearchResults] = useState<Array<TypeHeroApp>>([]);
   const [searchStatus, setSearchStatus] = useState<string>('');
+  const [btnStatus, setBtnStatus] = useState<boolean>(false);
 
   useEffect(() => {
     const fetchHeroData = async () => {
@@ -26,13 +27,26 @@ export const HeroHeader = () => {
   
 
   const onChangeInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearch(event.target.value);
+    const text = event.target.value;
+    if (text.trim().length > 0) {
+      setSearch(text);
+      setBtnStatus(true);
+    } else {
+      setSearch('');
+      setBtnStatus(false);
+    }
   }
+
+  const onClearInput = () => {
+    setSearch('');
+    setBtnStatus(false);
+  }
+
   return (
     <div className='flex items-center justify-between h-20'>
       <TitleApp title1={'Super'} title2={'Hero'} />
       <div className='w-full flex items-center justify-end relative'>
-        <HeroSearch search={search} onChangeInput={onChangeInput} />
+        <ComponentSearch search={search} placeholder={'Search your superhero here...'} page={'heros'} onChangeInput={onChangeInput} changueIcon={btnStatus} onClearInput={onClearInput} />
         {searchStatus === 'success' && searchResults.length > 0 && search.length > 0 && (
           <div className='bg-gray-900 h-auto max-h-[200px] absolute z-10 w-[40%] rounded-bl-2xl rounded-tl-2xl rounded-br-md rounded-tr-md top-24 right-0 overflow-y-auto scrollbar-custom'>
             <div className='py-2 px-4'>
