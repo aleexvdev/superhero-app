@@ -2,8 +2,8 @@ import { TitleApp } from '../../../ui/components/TitleApp'
 import { useEffect, useState } from 'react'
 import { TypeHeroApp } from '../../../types/TypeHero';
 import { getSearchHeroData } from '../../../api/apihero';
-import { HeroResult } from '../HeroResult';
 import { ComponentSearch } from '../../../components/ComponentSearch';
+import { ComponentListSearch } from '../../../components/ComponentListSearch';
 
 export const HeroHeader = () => {
 
@@ -44,14 +44,16 @@ export const HeroHeader = () => {
 
   return (
     <div className='flex items-center justify-between h-20'>
-      <TitleApp title1={'Super'} title2={'Hero'} />
+      <div className='max-w-[20%]'>
+        <TitleApp title1={'Super'} title2={'Hero'} />
+      </div>
       <div className='w-full flex items-center justify-end relative'>
         <ComponentSearch search={search} placeholder={'Search your superhero here...'} page={'heros'} onChangeInput={onChangeInput} changueIcon={btnStatus} onClearInput={onClearInput} />
         {searchStatus === 'success' && searchResults.length > 0 && search.length > 0 && (
-          <div className='bg-gray-900 h-auto max-h-[200px] absolute z-10 w-[40%] rounded-bl-2xl rounded-tl-2xl rounded-br-md rounded-tr-md top-24 right-0 overflow-y-auto scrollbar-custom'>
+          <div className='bg-gray-900 h-auto max-h-[200px] absolute z-10 max-w-[380px] w-full rounded-bl-2xl rounded-tl-2xl rounded-br-md rounded-tr-md top-24 right-0 overflow-y-auto scrollbar-custom'>
             <div className='py-2 px-4'>
               {searchResults.map((hero) => (
-                <HeroResult key={hero.id} props={hero} />
+                <ComponentListSearch key={hero.id} props={hero} />
               ))}
             </div>
           </div>
