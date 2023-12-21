@@ -44,7 +44,7 @@ export const HeroHeader = () => {
     
   }
 
-  const ClickedItem = (value: boolean) => {
+  const clickedItem = (value: boolean) => {
     if (value === false) {
       setTimeout(() => {
         setSearchResults([]);
@@ -66,7 +66,7 @@ export const HeroHeader = () => {
           <div className='bg-gray-900 h-auto max-h-[200px] absolute z-10 max-w-[380px] w-full rounded-bl-2xl rounded-tl-2xl rounded-br-md rounded-tr-md top-24 right-0 overflow-y-auto scrollbar-custom'>
             <div className='py-2 px-4'>
               {searchResults.map((hero) => (
-                <ComponentListSearch key={hero.id} props={hero} ClickedItem={ClickedItem} />
+                <ComponentListSearch key={hero.id} props={hero} clickedItem={clickedItem} />
               ))}
             </div>
           </div>

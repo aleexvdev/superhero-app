@@ -3,16 +3,16 @@ import { TypeHeroApp } from '../types/TypeHero';
 
 type ComponentListSearchProps = {
   props: TypeHeroApp;
-  ClickedItem: (value: boolean) => void;
+  clickedItem: (value: boolean) => void;
 }
 
-export const ComponentListSearch = ({ props, ClickedItem }: ComponentListSearchProps) => {
+export const ComponentListSearch = ({ props, clickedItem }: ComponentListSearchProps) => {
 
   const img = (props.image.url !== null) ? props.image.url : '/public/sin_foto.png';
 
   const handleClick = () => {
     // Agrega lógica adicional si es necesario
-    ClickedItem(false);
+    clickedItem(false);
   };
 
   return (
