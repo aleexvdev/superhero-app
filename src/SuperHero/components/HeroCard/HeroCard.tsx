@@ -1,6 +1,9 @@
+import { useState } from "react";
 import { TypeHeroApp } from "../../../types/TypeHero";
 import { IconHeart } from "../../../icons/IconHeart";
 import { putStorage } from "../../../helpers/LocalStorage";
+import { deleteHero, findItemInLocalStorage } from "../../../functions/globals";
+import { IconDislike } from "../../../icons/IconDislike";
 
 type PropsHeroCard = {
   props: TypeHeroApp;
@@ -9,9 +12,16 @@ type PropsHeroCard = {
 export const HeroCard = ({ props }: PropsHeroCard) => {
 
   const { id, name, powerstats, image } = props;
+  const [isHeroSaved, setIsHeroSaved] = useState(findItemInLocalStorage(id) === 1);
 
   const saveHero = () => {
     putStorage('SuperHero', props);
+    setIsHeroSaved(true);
+  }
+
+  const removeHeroLocal = () => {
+    deleteHero(id);
+    setIsHeroSaved(false);
   }
 
   return (
@@ -20,11 +30,24 @@ export const HeroCard = ({ props }: PropsHeroCard) => {
         <div className="w-full h-full">
           <div className="flex items-center justify-center relative">
             <img src={image.url} alt={name} className="w-[240px] h-full max-h-[250px] rounded-xl" />
-            <div className="absolute top-3 right-3 bg-red-600 hover:bg-white rounded-full w-16 h-16">
-              <IconHeart 
-                className="text-white hover:text-red-600 cursor-pointer w-full h-full"
-                onClick={saveHero}
-              />
+            <div className="absolute top-3 right-3 ">
+              {
+                (isHeroSaved) ? 
+                  <button className="bg-red-600 hover:bg-white rounded-full w-16 h-16">
+                    <IconDislike 
+                      className="text-white hover:text-red-600 cursor-pointer w-full h-full"
+                      onClick={removeHeroLocal}
+                    />
+                  </button>
+                : 
+                  <button className="bg-red-600 hover:bg-white rounded-full w-16 h-16">
+                    <IconHeart 
+                      className="text-white hover:text-red-600 cursor-pointer w-full h-full"
+                      onClick={saveHero}
+                    />
+                  </button>
+              }
+              
             </div>
           </div>
           <div className="flex items-center justify-center h-14">
