@@ -15,13 +15,33 @@ export const getStorage = <T>(key: string): T | null => {
   }
 }
 
-export const putStorage = <T>(key: string, value: T): void => {
+/* export const putStorage = <T>(key: string, value: T): void => {
   if ( localStorage ) {
     try {
       const serializedValue = JSON.stringify(value);
       localStorage.setItem(key, serializedValue);
     } catch (error) {
       console.error(`Error serializing value for localStorage key '${key}':`, error);
+    }
+  } else {
+    console.log('LocalStorage not supported');
+  }
+}; */
+
+export const putStorage = <T>(key: string, newItem: T): void => {
+  if (localStorage) {
+    try {
+      // Step 1: Retrieve existing data from local storage
+      const existingData = getStorage<T[]>(key) || [];
+
+      // Step 2: Modify the data by adding the new item
+      const updatedData = [...existingData, newItem];
+
+      // Step 3: Save the modified data back to local storage
+      const serializedValue = JSON.stringify(updatedData);
+      localStorage.setItem(key, serializedValue);
+    } catch (error) {
+      console.error(`Error updating localStorage key '${key}':`, error);
     }
   } else {
     console.log('LocalStorage not supported');

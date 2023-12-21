@@ -110,7 +110,6 @@ export type AddHeroAction =  {
 
 export type SetHerosAction =  {
   type: 'SET_HEROS';
-  payload: TypeHeroApp[];
 }
 
 export type DeleteHeroAction = {

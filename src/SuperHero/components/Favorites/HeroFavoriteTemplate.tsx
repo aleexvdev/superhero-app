@@ -24,7 +24,7 @@ export const HeroFavoriteTemplate = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3, // Puedes ajustar el número de tarjetas que se muestran a la vez
+    slidesToShow: 3,
     slidesToScroll: 1,
   };
 

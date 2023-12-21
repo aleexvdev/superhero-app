@@ -1,23 +1,19 @@
-import React  from "react";
-import { AddHeroAction, DeleteHeroAction, SetHerosAction, TypeHeroApp } from "../../../types/TypeHero";
+import { TypeHeroApp } from "../../../types/TypeHero";
 import { IconHeart } from "../../../icons/IconHeart";
-
-type Action = AddHeroAction | SetHerosAction | DeleteHeroAction;
+import { putStorage } from "../../../helpers/LocalStorage";
 
 type PropsHeroCard = {
   props: TypeHeroApp;
-  dispatch: React.Dispatch<Action>;
 }
 
-export const HeroCard = ({ props, dispatch }: PropsHeroCard) => {
+export const HeroCard = ({ props }: PropsHeroCard) => {
 
   const { id, name, powerstats, image } = props;
 
   const saveHero = () => {
-    dispatch({ 
-      type: 'ADD_HERO', 
-      payload: props 
-    });
+    putStorage('SuperHero', props);
+    console.log(id);
+
   }
 
   return (

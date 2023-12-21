@@ -1,7 +1,7 @@
 import { TitleApp } from '../../../ui/components/TitleApp'
 import { useEffect, useState } from 'react'
 import { TypeHeroApp } from '../../../types/TypeHero';
-import { getSearchHeroData } from '../../../api/apihero';
+import { getSearchHeroData } from '../../../services/apihero';
 import { ComponentSearch } from '../../../components/ComponentSearch';
 import { ComponentListSearch } from '../../../components/ComponentListSearch';
 

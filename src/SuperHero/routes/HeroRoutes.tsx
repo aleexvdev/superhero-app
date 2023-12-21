@@ -12,6 +12,7 @@ export const HeroRoutes = () => {
         <Route path="/favorites" element={<PageFavorite />} />
         <Route path="/info" element={<PageInfo />} />
         <Route path="/heroes/:id" element={<PageHero />} />
+        <Route path="/favorites/:id" element={<PageFavorite />} />
       </Routes>
     </div>
   )
