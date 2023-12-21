@@ -18,6 +18,7 @@ export const HeroHeader = () => {
         const response = await getSearchHeroData(search);
         setSearchResults(response.results);
         setSearchStatus(response.response);
+        // searchResults && setShowResult(true);
       } catch (error) {
         console.error(error);
       }
@@ -40,7 +41,19 @@ export const HeroHeader = () => {
   const onClearInput = () => {
     setSearch('');
     setBtnStatus(false);
+    
   }
+
+  const ClickedItem = (value: boolean) => {
+    if (value === false) {
+      setTimeout(() => {
+        setSearchResults([]);
+        setSearch('');
+        setBtnStatus(false);
+      }, 100); 
+    }
+  }
+
 
   return (
     <div className='flex items-center justify-between h-20'>
@@ -53,7 +66,7 @@ export const HeroHeader = () => {
           <div className='bg-gray-900 h-auto max-h-[200px] absolute z-10 max-w-[380px] w-full rounded-bl-2xl rounded-tl-2xl rounded-br-md rounded-tr-md top-24 right-0 overflow-y-auto scrollbar-custom'>
             <div className='py-2 px-4'>
               {searchResults.map((hero) => (
-                <ComponentListSearch key={hero.id} props={hero} />
+                <ComponentListSearch key={hero.id} props={hero} ClickedItem={ClickedItem} />
               ))}
             </div>
           </div>

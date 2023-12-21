@@ -12,8 +12,6 @@ export const HeroCard = ({ props }: PropsHeroCard) => {
 
   const saveHero = () => {
     putStorage('SuperHero', props);
-    console.log(id);
-
   }
 
   return (
