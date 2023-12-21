@@ -1,3 +1,7 @@
+interface Identifiable {
+  id: string; // You can adjust the type of 'id' as needed
+}
+
 export const getStorage = <T>(key: string): T | null => {
   if ( localStorage ) {
     const item = localStorage.getItem(key);
@@ -28,7 +32,7 @@ export const getStorage = <T>(key: string): T | null => {
   }
 }; */
 
-export const putStorage = <T>(key: string, newItem: T): void => {
+export const putStorage = <T extends Identifiable>(key: string, newItem: T): void => {
   if (localStorage) {
     try {
       const existingData = getStorage<T[]>(key) || [];
